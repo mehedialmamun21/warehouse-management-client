@@ -62,9 +62,7 @@ const Register = () => {
             const user = result.user;
             console.log(user);
             verifyEmail();
-
-            setSuccess("email verification sent")
-
+            setSuccess("email verification sent, please verify :")
         })
         .catch(error => {
             setSuccess('');
@@ -100,11 +98,12 @@ const Register = () => {
                     </Form.Group>
 
                     <p className='text-danger'>{error}</p>
-
+                    
                     <Button variant="primary" type="submit">
                         Register
                     </Button>
-                    <br /> 
+                    
+                    <br />
                     <p className='text-success'>{success}</p>
                     <br />
 

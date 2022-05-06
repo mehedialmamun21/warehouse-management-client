@@ -1,4 +1,4 @@
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
@@ -16,6 +16,8 @@ const Login = () => {
     const [email,setEmail] = useState('');
 
     const [password,setPassword] = useState('');
+
+    const [reset, setReset] = useState('');
 
     const handleEmailBlur = event => {
         setEmail(event.target.value);
@@ -68,6 +70,14 @@ const Login = () => {
         event.preventDefault();
     }
 
+    const handlePasswordReset = () => {
+        sendPasswordResetEmail(auth, email)
+        .then(() => {
+            setReset('Password reset email sent');
+            console.log('Password reset email sent');
+        })
+    }
+
     return (
         <div>
             <div className="registration w-50 mx-auto mt-5">
@@ -90,7 +100,9 @@ const Login = () => {
                     <Button variant="primary" type="submit">
                         Login
                     </Button>
+                    <Button onClick={handlePasswordReset} className='text-decoration-none' variant="link">Forget password?</Button>
                     <br /> <br />
+                    <p className="text-success">{reset}</p>
                     <p>
                         Didn't register yet ?
                         <Link
