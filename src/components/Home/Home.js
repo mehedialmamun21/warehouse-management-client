@@ -17,7 +17,7 @@ const Home = () => {
     return (
         <div className='home'>
 
-            <h2>Smartphone Management Warehouse</h2>
+            <h2 className='mx-auto'>Smartphone Management Warehouse</h2>
 
 
             <div className='carousel mx-auto'>

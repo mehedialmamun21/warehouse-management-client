@@ -4,7 +4,7 @@
 }
 
 .home h2 {
-    background-color: aquamarine;
+    background-color: #7fe5ffd4;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -12,6 +12,8 @@
     color: gray;
     font-family: 'Times New Roman', Times, serif;
     margin-top: 2px;
+    width: 950px;
+    border-radius: 15px;
 }
 
 .carousel {
