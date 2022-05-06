@@ -32,7 +32,8 @@ const Header = () => {
 
                 <Nav className="me-auto">
                     <Nav.Link href="/">Home</Nav.Link>
-                    
+                    <Nav.Link href="/blogs">Blogs</Nav.Link>
+
                     {
                         user && <>
                             <Nav.Link href="/addItem">Add-Item</Nav.Link>
@@ -45,7 +46,7 @@ const Header = () => {
 
                 {user ? (
                     <button className="sign-out" onClick={handleSignOut}>
-                        Sign Out
+                        Logout
                     </button>
                     ) : (
                     <div className="log-in">
