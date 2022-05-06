@@ -1,0 +1,19 @@
+.home {
+    background-color: #80808044;
+    min-height: 100vh;
+}
+
+.home h2 {
+    background-color: aquamarine;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: gray;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 2px;
+}
+
+.carousel {
+    width: 950px;
+}

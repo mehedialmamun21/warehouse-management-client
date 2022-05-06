@@ -5,7 +5,7 @@ const Blogs = () => {
         <div className='w-50 mx-auto mt-5 mb-5'>
             <div>
                 <div>
-                    <h2>Difference between javascript and nodejs ? </h2>
+                    <h4># Difference between javascript and nodejs ? </h4>
                     <p>
                         JavaScript is a simple programming language that
                         runs in any browser JavaScript Engine. Whereas Node
@@ -16,7 +16,7 @@ const Blogs = () => {
                     </p>
                 </div>
                 <div>
-                    <h2>When should you use nodejs and when should you use mongodb ?</h2>
+                    <h4># When should you use nodejs and when should you use mongodb ?</h4>
                     <p>
                     There are many web servers built with nodejs that will then use
                      MongoDB for storing data. MongoDB offers an API library that 
@@ -28,7 +28,7 @@ const Blogs = () => {
             </div>
             <div>
                 <div>
-                    <h2>Differences between sql and nosql databases.</h2>
+                    <h4># Differences between sql and nosql databases.</h4>
                     <p>
                         SQL databases are vertically scalable, 
                         while NoSQL databases are horizontally scalable. 
@@ -39,7 +39,7 @@ const Blogs = () => {
                     </p>
                 </div>
                 <div>
-                    <h2>What is the purpose of jwt and how does it work ?</h2>
+                    <h4># What is the purpose of jwt and how does it work ?</h4>
                     <p>
                         JWT, or JSON Web Token, 
                         is an open standard used to share security 

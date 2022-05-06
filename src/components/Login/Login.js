@@ -9,6 +9,8 @@ import app from "../../firebase.init";
 
 const auth = getAuth(app);
 
+
+
 const Login = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
@@ -19,11 +21,9 @@ const Login = () => {
 
     let errorElement;
     if (error) {
-        
         errorElement =  <div>
             <p className='text-danger'>Error: {error.message}</p>
           </div>
-       
       }
 
   if (user) {
@@ -39,6 +39,7 @@ const Login = () => {
   const navigateRegister = (event) => {
     navigate("/register");
   };
+
 
   return (
     <div className="container w-50 mx-auto">
@@ -66,9 +67,9 @@ const Login = () => {
             required
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+        {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
+        </Form.Group> */}
 
         <p className="text-danger">{errorElement}</p>
         
@@ -86,7 +87,9 @@ const Login = () => {
           Please Register
         </Link>
       </p>
+
       <SocialLogin></SocialLogin>
+
     </div>
   );
 };
