@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useState } from 'react';
 import app from '../../firebase.init';
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, sendEmailVerification } from "firebase/auth";
 import { Link, useNavigate } from 'react-router-dom';
 
 const auth  = getAuth(app);
@@ -61,8 +61,9 @@ const Register = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
+            verifyEmail();
 
-            setSuccess("Congratulations!! registration successful..")
+            setSuccess("email verification sent")
 
         })
         .catch(error => {
@@ -72,6 +73,13 @@ const Register = () => {
         })
 
         event.preventDefault();
+    }
+
+    const verifyEmail = () => {
+        sendEmailVerification (auth.currentUser)
+        .then(() => {
+            console.log('Email verification sent');
+        })
     }
 
     return (
