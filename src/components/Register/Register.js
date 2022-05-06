@@ -4,6 +4,7 @@ import { useState } from 'react';
 import app from '../../firebase.init';
 import { createUserWithEmailAndPassword, getAuth, sendEmailVerification, updateProfile } from "firebase/auth";
 import { Link, useNavigate } from 'react-router-dom';
+import SocialLogin from '../Login/SocialLogin/SocialLogin';
 
 const auth  = getAuth(app);
 
@@ -106,7 +107,7 @@ const Register = () => {
 
                 <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
 
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Group className="mb-3" controlId="formBasicName">
                         <Form.Label>Your Name</Form.Label>
                         <Form.Control onBlur={handleNameBlur} type="text" placeholder="Enter name" required />
                     </Form.Group>
@@ -141,7 +142,7 @@ const Register = () => {
                             Please Login
                         </Link>
                     </p>
-
+                    <SocialLogin></SocialLogin>
                 </Form>
             </div>
         </div>

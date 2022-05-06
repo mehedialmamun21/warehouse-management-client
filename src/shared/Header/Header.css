@@ -1,0 +1,23 @@
+.sign-out {
+    color: gray;
+    font-weight: bold;
+    margin-left: 10px;
+    border: 1px solid #FFFFFF;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.log-in a {
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+    margin-left: 10px;
+    border: 1px solid #FFFFFF;
+    padding: 3px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+Nav a {
+    font-weight: bold;
+}
