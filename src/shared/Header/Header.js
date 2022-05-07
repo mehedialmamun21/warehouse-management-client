@@ -33,14 +33,20 @@ const Header = () => {
                 <Nav className="me-auto">
                     <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="/blogs">Blogs</Nav.Link>
+                    <Nav.Link href="/inventories">Inventories</Nav.Link>
 
-                    {
+
+                        <Nav.Link href="/add_item">Add-Item</Nav.Link>
+                        <Nav.Link href="/manage_items">Manage-Items</Nav.Link>
+                        <Nav.Link href="/my_items">My-Items</Nav.Link>
+
+                    {/* {
                         user && <>
-                            <Nav.Link href="/addItem">Add-Item</Nav.Link>
-                            <Nav.Link href="/manageItems">Manage-Items</Nav.Link>
-                            <Nav.Link href="/myItems">My-Items</Nav.Link>
+                            <Nav.Link href="/additem">Add-Item</Nav.Link>
+                            <Nav.Link href="/manageitems">Manage-Items</Nav.Link>
+                            <Nav.Link href="/myitems">My-Items</Nav.Link>
                         </>
-                    }
+                    } */}
 
                 </Nav>
 

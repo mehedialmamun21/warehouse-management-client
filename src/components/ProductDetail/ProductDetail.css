@@ -1,0 +1,15 @@
+#pro-det {
+    min-height: 100vh;
+}
+
+.product-details {
+    width: 25%;
+    background-color: #6dd5b2ad;
+    margin-top: 50px;
+}
+
+.product-details p {
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
