@@ -13,11 +13,13 @@ const Header = () => {
 
   const [user] = useAuthState(auth);
   
+
 //   const navigate = useNavigate();
 
   const handleSignOut = () => {
     signOut(auth);
   };
+
 
 //   if(user){
 //     navigate('/home');
@@ -36,22 +38,23 @@ const Header = () => {
                     <Nav.Link href="/inventories">Inventories</Nav.Link>
 
 
-                        <Nav.Link href="/add_item">Add-Item</Nav.Link>
+                        {/* <Nav.Link href="/add_item">Add-Item</Nav.Link>
                         <Nav.Link href="/manage_items">Manage-Items</Nav.Link>
-                        <Nav.Link href="/my_items">My-Items</Nav.Link>
+                        <Nav.Link href="/my_items">My-Items</Nav.Link> */}
 
-                    {/* {
+                    {
                         user && <>
-                            <Nav.Link href="/additem">Add-Item</Nav.Link>
-                            <Nav.Link href="/manageitems">Manage-Items</Nav.Link>
-                            <Nav.Link href="/myitems">My-Items</Nav.Link>
+                            <Nav.Link href="/add_item">Add-Item</Nav.Link>
+                            <Nav.Link href="/manage_items">Manage-Items</Nav.Link>
+                            <Nav.Link href="/my_items">My-Items</Nav.Link>
                         </>
-                    } */}
+                    }
 
                 </Nav>
+                
 
                 {user ? (
-                    <button className="sign-out" onClick={handleSignOut}>
+                    <button className="log-out" onClick={handleSignOut}>
                         Logout
                     </button>
                     ) : (

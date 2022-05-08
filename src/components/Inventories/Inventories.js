@@ -6,13 +6,31 @@ import './Inventories.css';
 
 const Inventories = () => {
 
-    const [products] = useInventories();
+    const [products,setProducts] = useInventories();
 
     const navigate = useNavigate();
-    
+
     const navigateToAddItem = () =>{
         navigate(`/add_item`);
     }
+
+
+    const handleDelete = id => {
+        const proceed = window.confirm('Are You Sure ?');
+        if(proceed){
+            const url = `http://localhost:5000/product/${id}`;
+            fetch(url, {
+                method : 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data);
+                const remaining = products.filter(product => product._id !== id);
+                setProducts(remaining);
+            })
+        }
+    }
+
 
     return (
         
@@ -29,7 +47,7 @@ const Inventories = () => {
                                 <h4>Name : {product.name}</h4>
                                 <p>Price : {product.price}</p>
                                 <p><small>{product.description}</small></p>
-                                <button className='btn btn-danger' >Delete</button>
+                                <button onClick={() => handleDelete(product._id)} className='btn btn-danger' >Delete</button>
                             </div>
                         </div> )
                 }
