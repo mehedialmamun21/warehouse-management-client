@@ -134,9 +134,9 @@ const Home = () => {
             </div>
 
 
-            <div className='container  d-flex'>
+            <div className='container  w-50 mx-auto'>
                 <img src={imge} alt="" />
-                <div className='ms-5'>
+                <div className='mt-5'>
                     <h4>Why you need an Android warehouse management system?</h4>
                     <p>
                         Googles Android boasts 90% of smartphone users, but their operating 
