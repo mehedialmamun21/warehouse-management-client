@@ -16,6 +16,7 @@ const ProductDetail = () => {
 
 
     const handleRestockQuantity = event => {
+
         event.preventDefault();
         const quantity = event.target.quantity.value;
 
@@ -33,7 +34,7 @@ const ProductDetail = () => {
         .then(res => res.json())
         .then(data => {
             // console.log('successfully updated',data);
-            alert('quantity updated successfully');
+            alert('RELOAD page to see updated quantity');
             event.target.reset();
         })
     }
@@ -55,15 +56,14 @@ const ProductDetail = () => {
 
 
 
-            <div className='w-50 mx-auto mt-5'>
+            <div className='w-25 mx-auto mt-5'>
                 <h4>Restock the Items :</h4>
                 <form onSubmit={handleRestockQuantity}>
-                    <input type="number" placeholder="Add Quantity" name="number" id="" />
+                    <input type="number" placeholder="Add Quantity" name="quantity" id="" />
                     <br /><br />
                     <input className='btn btn-success' type="submit" value="Restock"  />
                     <br /> <br />
                 </form>
-                <button className='btn btn-danger'>Delivered</button>
             </div>
 
 
