@@ -34,7 +34,7 @@ const ProductDetail = () => {
         .then(res => res.json())
         .then(data => {
             // console.log('successfully updated',data);
-            alert('RELOAD page to see updated quantity');
+            alert('Quantity updated successfully');
             event.target.reset();
         })
     }
@@ -63,6 +63,7 @@ const ProductDetail = () => {
                     <br /><br />
                     <input className='btn btn-success' type="submit" value="Restock"  />
                     <br /> <br />
+                    <small className='mess'>please reload the page to see the updated quantity</small>
                 </form>
             </div>
 
