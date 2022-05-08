@@ -54,9 +54,18 @@ const Header = () => {
                 
 
                 {user ? (
-                    <button className="log-out" onClick={handleSignOut}>
-                        Logout
-                    </button>
+                    // <button className="log-out" onClick={handleSignOut}>
+                    //     Logout
+                    // </button>
+
+                    <Link to="/">
+                        <button className="log-out" onClick={handleSignOut}>
+                            Logout
+                        </button>         
+                    </Link>
+
+
+
                     ) : (
                     <div className="log-in">
                         <Link to="/login">Login</Link>

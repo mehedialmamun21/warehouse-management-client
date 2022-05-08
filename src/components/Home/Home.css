@@ -4,7 +4,6 @@
 }
 
 .home-title {
-    background-color: #7fe5ffd4;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -24,12 +23,15 @@
 .invent {
     width: 950px;
     margin-top: 40px;
-    padding: 5px;
+    padding: 15px;
     font-family: 'Times New Roman', Times, serif;
-    color: orange;
+    color: #646363d4;
     font-weight: bold;
-    background-color: #e5ff7f80;
-    border-radius: 15px;
+    border-radius: 30px;
+    /* border: 2px solid #a09d9d77; */
+    border-width: 5px;
+    text-align: center;
+    background-color: #aed0c57a;
 }
 
 .products-cont {

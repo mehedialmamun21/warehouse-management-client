@@ -41,7 +41,7 @@ const Home = () => {
                 alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>Best Quality Smartphone</h3>
+                    <h5>Best Quality Smartphone</h5>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -52,7 +52,7 @@ const Home = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Consistent Performance for a long time </h3>
+                    <h5>Consistent Performance for a long time </h5>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -63,7 +63,7 @@ const Home = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Well known and guaranted services</h3>
+                    <h5>Well known products facility</h5>
                 </Carousel.Caption>
             </Carousel.Item>
             </Carousel>
@@ -86,7 +86,7 @@ const Home = () => {
 
 
             <Link to="/inventories">
-                <button className='btn btn-primary mt-5 ms-5' type="button"> 
+                <button className='btn btn-primary mt-5 ms-5 mb-5' type="button"> 
                     Manage Inventories 
                 </button>         
             </Link>
