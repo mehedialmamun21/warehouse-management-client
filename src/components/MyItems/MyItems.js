@@ -9,7 +9,7 @@ const MyItems = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are You Sure ?');
         if(proceed){
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://salty-castle-19082.herokuapp.com/product/${id}`;
             fetch(url, {
                 method : 'DELETE'
             })
@@ -31,7 +31,9 @@ const MyItems = () => {
                             <img src={product.img} alt="" />
                             <h4>Name : {product.name}</h4>
                             <p>Price : {product.price}</p>
-                            <p><small>{product.description}</small></p>
+                            <p>Description : <small>{product.description}</small></p>
+                            <p>Supplier : {product.supplier}</p>
+                            <p>Quantity : {product.quantity}</p>
                             <button onClick={() => handleDelete(product._id)} className='btn btn-danger' >Delete</button>
                         </div>
                     </div> )

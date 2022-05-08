@@ -30,7 +30,11 @@
     border-radius: 30px;
     border-width: 5px;
     text-align: center;
-    background-color: #aed0c57a;
+    /* background-color: #aed0c57a; */
+}
+
+.last-sec {
+    display: flex;
 }
 
 .products-cont {
@@ -38,7 +42,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
-
 
 
 /* making products-section responsive */
