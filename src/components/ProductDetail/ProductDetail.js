@@ -11,25 +11,20 @@ const ProductDetail = () => {
         fetch(url)
         .then(res => res.json())
         .then(data => setProduct(data))
-    },[]);
-
-
+    },[product]);
 
     const handleRestockQuantity = event => {
-
         event.preventDefault();
         const quantity = event.target.quantity.value;
-
         const updatedQuantity = {quantity};
 
         const url = `https://salty-castle-19082.herokuapp.com/product/${productId}`;
-        console.log(url);
         fetch(url,{
             method: 'PUT',
             headers: {
-                'content-type' : 'application/json'
+                    'content-type' : 'application/json'
             },
-            body: JSON.stringify(updatedQuantity)
+             body: JSON.stringify(updatedQuantity)
         })
         .then(res => res.json())
         .then(data => {
@@ -38,7 +33,6 @@ const ProductDetail = () => {
             event.target.reset();
         })
     }
-
 
 
     return (
@@ -62,8 +56,6 @@ const ProductDetail = () => {
                     <input type="number" placeholder="Add Quantity" name="quantity" id="" />
                     <br /><br />
                     <input className='btn btn-success' type="submit" value="Restock"  />
-                    <br /> <br />
-                    <small className='mess'>please reload the page to see the updated quantity</small>
                 </form>
             </div>
 
