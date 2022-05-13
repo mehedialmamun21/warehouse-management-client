@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {Accordion, Carousel, Placeholder} from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Accordion, Carousel, Placeholder } from "react-bootstrap";
 import "./Home.css";
 
 import imge from "../../images/home_section_img.jpg";
@@ -7,7 +7,7 @@ import imge from "../../images/home_section_img.jpg";
 import img2 from "../../images/img2.jpg";
 import img3 from "../../images/img3.jpg";
 import img7 from "../../images/img7.jpg";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Collection from "../Collection/Collection";
 
 const Home = () => {
@@ -95,7 +95,7 @@ const Home = () => {
         ))}
       </div>
 
-      <div className="container w-25 mx-auto">
+      <div className="container w-25 mx-auto my-5">
         <Link to="/inventories">
           <button className="btn btn-primary mt-5 ms-5 mb-5" type="button">
             Manage Inventories
@@ -103,9 +103,9 @@ const Home = () => {
         </Link>
       </div>
 
-      <div className="container  w-50 mx-auto">
+      <div className="container d-flex">
         <img src={imge} alt="" />
-        <div className="mt-5">
+        <div className="mt-5 ms-5">
           <h4>Why you need an Android warehouse management system?</h4>
           <p>
             Googles Android boasts 90% of smartphone users, but their operating
