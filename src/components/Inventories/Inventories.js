@@ -6,34 +6,31 @@ import './Inventories.css';
 
 const Inventories = () => {
 
-    const [products,setProducts] = useInventories();
+    const [products, setProducts] = useInventories();
 
     const navigate = useNavigate();
 
-    const navigateToAddItem = () =>{
+    const navigateToAddItem = () => {
         navigate(`/add_item`);
     }
 
-
     const handleDelete = id => {
         const proceed = window.confirm('Are You Sure ?');
-        if(proceed){
+        if (proceed) {
             const url = `https://salty-castle-19082.herokuapp.com/product/${id}`;
             fetch(url, {
-                method : 'DELETE'
+                method: 'DELETE'
             })
-            .then(res => res.json())
-            .then(data => {
-                // console.log(data);
-                const remaining = products.filter(product => product._id !== id);
-                setProducts(remaining);
-            })
+                .then(res => res.json())
+                .then(data => {
+                    // console.log(data);
+                    const remaining = products.filter(product => product._id !== id);
+                    setProducts(remaining);
+                })
         }
     }
 
-
     return (
-        
         <div>
 
             <button onClick={navigateToAddItem} className='btn btn-success ms-5 mt-5'>Add New Item</button>
@@ -42,22 +39,21 @@ const Inventories = () => {
 
                 {
                     products.map(product => <div key={product._id}>
-                            <div className="pro-all">
-                                <img src={product.img} alt="" />
-                                <h4>Name : {product.name}</h4>
-                                <p>Price : {product.price}</p>
-                                <p>Description : <small>{product.description}</small></p>
-                                <p>Supplier : {product.supplier}</p>
-                                <p>Quantity : {product.quantity}</p>
-                                <button onClick={() => handleDelete(product._id)} className='btn btn-danger' >Delete</button>
-                            </div>
-                        </div> )
+                        <div className="pro-all">
+                            <img src={product.img} alt="" />
+                            <h4>Name : {product.name}</h4>
+                            <p>Price : {product.price}</p>
+                            <p>Description : <small>{product.description}</small></p>
+                            <p>Supplier : {product.supplier}</p>
+                            <p>Quantity : {product.quantity}</p>
+                            <button onClick={() => handleDelete(product._id)} className='btn btn-danger' >Delete</button>
+                        </div>
+                    </div>)
                 }
 
             </div>
 
         </div>
-
 
     );
 };

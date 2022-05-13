@@ -1,8 +1,8 @@
-import React, {useRef} from "react";
-import {Button, Form} from "react-bootstrap";
+import React, { useRef } from "react";
+import { Button, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {Link, useNavigate} from "react-router-dom";
-import {useSignInWithEmailAndPassword} from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import SocialLogin from "../Login/SocialLogin/SocialLogin";
 import { getAuth } from "firebase/auth";
 import app from "../../firebase.init";
@@ -19,12 +19,12 @@ const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
-    let errorElement;
-    if (error) {
-        errorElement =  <div>
-            <p className='text-danger'>Error: {error.message}</p>
-          </div>
-      }
+  let errorElement;
+  if (error) {
+    errorElement = <div>
+      <p className='text-danger'>Error: {error.message}</p>
+    </div>
+  }
 
   if (user) {
     navigate("/");
@@ -67,12 +67,9 @@ const Login = () => {
             required
           />
         </Form.Group>
-        {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group> */}
 
         <p className="text-danger">{errorElement}</p>
-        
+
         <Button variant="primary" type="submit">
           Submit
         </Button>
