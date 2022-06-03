@@ -22,7 +22,7 @@ const Home = () => {
   useEffect(() => {
     fetch("https://salty-castle-19082.herokuapp.com/product")
       .then((res) => res.json())
-      .then((data) => setCollections(data.splice(0, 6)));
+      .then((data) => setCollections(data.splice(0, 10)));
   }, []);
 
   return (
@@ -34,14 +34,14 @@ const Home = () => {
           <Carousel.Item>
             <img className="d-block w-100" src={img3} alt="First slide" />
             <Carousel.Caption>
-              <h5>Best Quality Smartphone</h5>
+              <h5>Best Quality</h5>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img className="d-block w-100" src={img7} alt="Second slide" />
 
             <Carousel.Caption>
-              <h5>Consistent Performance for a long time </h5>
+              <h5>Consistent Performance</h5>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
